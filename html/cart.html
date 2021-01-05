@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oniroco - Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container">
+              <a href="../index.html" class="navbar-brand  order-1 order-sm-3"><img src="../Img/logo-orinoco.png" alt="#" srcset=""></a>
+                <button class="navbar-toggler order-2" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-3 order-sm-1" id="main_navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="../index.html" class="nav-link active">Acceuil</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="./listing-photos.html">Appareil photo</a></li>
+                              <li><a class="dropdown-item" href="#">Ours en peluche</a></li>
+                              <li><a class="dropdown-item" href="#">Meubles en chêne</a></li>
+                            </ul>
+                          </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse order-4" id="main_navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-alt"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+</header>
+
+<section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-5">
+          <h1>Your Cart</h1>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+      <div class="row mb-1 d-none d-lg-flex">
+        <div class="col-lg-8">
+          <div class="row pr-5">
+            <div class="col-lg-6"><span class="eyebrow">Product</span></div>
+            <div class="col-lg-2 text-center"><span class="eyebrow">Price</span></div>
+            <div class="col-lg-2 text-center"><span class="eyebrow">Quantity</span></div>
+            <div class="col-lg-2 text-center"><span class="eyebrow">Total</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="row gutter-2 gutter-lg-4 justify-content-end">
+        <div class="col-lg-8 cart-item-list">
+          <!-- cart item -->
+          <div class="cart-item pr-5 mt-2">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6">
+                <div class="media-product">
+                  <a href="#!"><img src="../Img/tuyen-vo-s9_3c154iTM-unsplash.jpg" alt="Image" class="w-100"></a>
+                  <div class="media-desc ml-3">
+                    <h5 class="media-title">Analog Magazine Rack</h5>
+                    <span class="small">Red</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">120&euro;</span>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="counter">
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">240&euro;</span>
+              </div>
+              <a href="#!" class="cart-item-close"><i class="far fa-times-circle"></i></a>
+            </div>
+          </div>
+          <hr>
+           <!-- cart item -->
+          <div class="cart-item pr-5 mt-2">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6">
+                <div class="media-product">
+                  <a href="#!"><img src="../Img/tuyen-vo-s9_3c154iTM-unsplash.jpg" alt="Image" class="w-100"></a>
+                  <div class="media-desc ml-3">
+                    <h5 class="media-title">Analog Magazine Rack</h5>
+                    <span class="small">Red</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">120&euro;</span>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="counter">
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">240&euro;</span>
+              </div>
+              <a href="#!" class="cart-item-close"><i class="far fa-times-circle"></i></a>
+            </div>
+          </div>
+          <hr>
+           <!-- cart item -->
+          <div class="cart-item pr-5 mt-2">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6">
+                <div class="media-product">
+                  <a href="#!"><img src="../Img/tuyen-vo-s9_3c154iTM-unsplash.jpg" alt="Image" class="w-100"></a>
+                  <div class="media-desc ml-3">
+                    <h5 class="media-title">Analog Magazine Rack</h5>
+                    <span class="small">Red</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">120&euro;</span>
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="counter">
+              </div>
+              <div class="col-4 col-lg-2 text-center">
+                <span class="cart-item-price">240&euro;</span>
+              </div>
+              <a href="#!" class="cart-item-close"><i class="far fa-times-circle"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+                  <h3 class="card-title">Order Summary</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Subtotal<span class="float-right">418&euro;</span></p>
+                <p class="card-text">Shipping<span class="float-right">Free</span></p>
+            </div>
+            <div class="card-footer">
+                <p class="">Total<span class="float-right">418&euro;</span></p>
+            </div>
+          </div>
+          <a href="" class="btn btn-lg btn-primary btn-block mt-1">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="py-5 text-white">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 order-2 order-md-1 py-3">
+              <div class="row">
+                  <div class="col-md-8">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nemo quod reiciendis omnis, dolores fugiat cumque eveniet iure vitae 
+                      </p>
+                  </div>
+                  
+              </div>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4 class="eyebrow mb-2">Quick links</h4>
+                      <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item"><a href="#">About</a></li>
+                          <li class="list-group-item"><a href="#">FAQ</a></li>
+                          <li class="list-group-item"><a href="#">Terms os Use</a></li>
+                          <li class="list-group-item"><a href="#">Contact Us</a></li>
+                          <li class="list-group-item"><a href="#">Blog</a></li>
+                      </ul>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-md-6 order-1 order-md-2 py-3">
+              <div class="row justify-content-end">
+                  <div class="col mb-4">
+                      <h4 class="eyebrow">Subscribe</h4>
+                      <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Email" aria-label="Subscribe" aria-describedby="button-addon2">
+                          <button class="btn btn-white" type="button" id="button-addon2">Subscribe</button>
+                      </div>
+                  </div>
+                  
+              </div>
+              <div class="row justify-content-end">
+                  <div class="col">
+                      <h4 class="eyebrow">Follow Us</h4>
+                      <nav class="nav nav-icons">
+                          <a href="" class="nav-link"><i class="fab fa-facebook"></i></a>
+
+                          <a href="" class="nav-link"><i class="fab fa-twitter"></i></a>
+
+                          <a href="" class="nav-link"><i class="fab fa-youtube"></i></a>
+                          
+                      </nav>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
