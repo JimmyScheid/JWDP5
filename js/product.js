@@ -2,14 +2,13 @@ const productDesc = document.querySelector('#productDesc');
 const params = (new URL(document.location)).searchParams;
 const id = params.get('id'); 
 
+
 fetch("http://localhost:3000/api/cameras/" + id)
   .then(async result_ => {
     const result = await result_.json()
     camera = result 
     cameraDesc(camera)
     lenseList(camera)
-    addToPrice(camera)
-    addToBasket()
   })
   .catch((error) => {
     console.log(error);
@@ -60,11 +59,12 @@ function cameraDesc(camera){
             </form>
             <div class="row">
               <div class="col-md-8">
-                <a href="#!" class="btn btn-block btn-lg btn-primary add-cart">Add to Cart</a>
+                <a class="btn btn-block btn-lg btn-primary" id="add-basket">Add to Cart</a>
               </div>
             </div>
         </div>`
-  
+        addToPrice()
+        addToBasket() 
 }
 
 function lenseList(camera){
@@ -85,3 +85,44 @@ function addToPrice() {
   }) 
 }
 
+function addToBasket(){
+  let button = document.querySelector('#add-basket');
+  button.addEventListener('click', () =>{
+    let quantity = document.getElementById("quantity").value
+    let panier = localStorage.getItem("panier")
+    let produit = {
+      name: camera.name,
+      id: camera._id,
+      lenses: formControl.value,
+      quantity: parseInt(quantity),
+      price: camera.price * quantity,
+      priceByItems: camera.price,
+      imageUrl: camera.imageUrl
+    };
+
+    if(!panier){
+      panier = []
+    }else{
+      panier = JSON.parse(panier)
+      
+    }
+
+
+    let isTheSame = false;
+
+    panier.forEach((prod,i) => {
+      
+        if(prod.id == produit.id && prod.lenses == produit.lenses){
+            panier[i].quantity += produit.quantity;
+            isTheSame = true;
+        }
+    })   
+    if(!isTheSame) {
+        panier.push(produit)
+    }
+    localStorage.setItem("panier", JSON.stringify(panier))
+    addNumberCart()
+  })
+  
+ 
+}
